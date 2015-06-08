@@ -52,4 +52,20 @@ var productsICanEat = [];
 productsICanEat = products.filter(function(x){
   return x.containsNuts === false && x.ingredients.indexOf("mushrooms") <= 0;
   });
-console.log(productsICanEat);
+//console.log(productsICanEat);
+
+var ingredientCount = {};
+
+var theIngredients = [];
+theIngredients = products.map(function(x){
+    return x.ingredients;
+});
+theIngredients = theIngredients.reduce(function(a,b){return a.concat(b);});
+var shroomNumb = theIngredients.filter(function(x){return x === "mushrooms";});
+ingredientCount.mushrooms = shroomNumb.length;
+
+console.log(theIngredients);
+console.log(ingredientCount);
+/* chain() together map(), flatten() and reduce() */
+
+//expect(ingredientCount['mushrooms']).toBe(2);
