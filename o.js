@@ -1,4 +1,4 @@
-function sayHello (words){
+/*function sayHello (words){
   var intro = "Hello, it's nice to see you. ";
   function finish (finalWords){
     return intro + words + " " + finalWords;
@@ -36,3 +36,20 @@ console.log(catChecker(kitty));
 kitty.color = "orange";
 console.log(catChecker(kitty));
 console.log(kitty.color, kitty.fcolor());
+*/
+//testing thing from js koans
+var products = [
+     { name: "Sonoma", ingredients: ["artichoke", "sundried tomatoes", "mushrooms"], containsNuts: false },
+     { name: "Pizza Primavera", ingredients: ["roma", "sundried tomatoes", "goats cheese", "rosemary"], containsNuts: false },
+     { name: "South Of The Border", ingredients: ["black beans", "jalapenos", "mushrooms"], containsNuts: false },
+     { name: "Blue Moon", ingredients: ["blue cheese", "garlic", "walnuts"], containsNuts: true },
+     { name: "Taste Of Athens", ingredients: ["spinach", "kalamata olives", "sesame seeds"], containsNuts: true }
+  ];
+
+//it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (functional)", function () {
+
+var productsICanEat = [];
+productsICanEat = products.filter(function(x){
+  return x.containsNuts === false && x.ingredients.indexOf("mushrooms") <= 0;
+  });
+console.log(productsICanEat);
