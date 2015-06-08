@@ -8,3 +8,11 @@ function sayHello (words){
 
 var start = sayHello("My name is Jeremy.");
 console.log(start("Its nice to meet you."));
+
+console.log("testing func params");
+
+function readMeParams(first, second){
+  return second;
+}
+
+console.log(readMeParams("There is only one"));
